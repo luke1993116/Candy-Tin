@@ -1,4 +1,4 @@
-const CACHE = 'graviboxes-v40';
+const CACHE = 'graviboxes-v42';
 const ASSETS = ['./index.html', './manifest.json', './icon.svg', './icon-180.png'];
 
 self.addEventListener('install', e => {

@@ -313,14 +313,13 @@ iconCache = [...ICONS, ...DOCK_DEFS].map(buildIconCanvas);
 // ─────────────────────────────────────────────
 const COLS=4;
 function layout(cw, ch){
-  const sc = cw / 390;              // 按屏幕宽度缩放，不设上限（iPhone宽390pt = sc=1.0）
-  const ic  = Math.round(60 * sc);  // 60pt — iPhone标准app图标大小
-  const hg  = Math.round(18 * sc);  // 18pt — 水平间距
-  const vg  = Math.round(14 * sc);  // 14pt — 垂直间距
-  const lh  = Math.round(20 * sc);  // 20pt — label行高（不显示文字，只占位）
+  const sc = Math.min(cw / 390, 1.0);  // 最大1.0，iPhone满屏刚好
+  const ic  = Math.round(60 * sc);
+  const hg  = Math.round(18 * sc);
+  const vg  = Math.round(14 * sc);
+  const lh  = Math.round(20 * sc);
   const top = Math.round(90 * sc);
   return { ic, hg, vg, lh, top, sc };
-};
 }
 function homePos(cw, ch){
   const L = layout(cw, ch);
@@ -399,7 +398,7 @@ function drawWallpaper() {
 }
 
 function getDockMetrics() {
-  const sc = W / 390;
+  const sc = Math.min(W / 390, 1.0);
   const iconSz = Math.round(60*sc);  // 和主网格图标同尺寸
   const gap    = Math.round(18*sc);
   const pad    = Math.round(14*sc);
