@@ -1,0 +1,24 @@
+{
+  "name": "GraviBoxes",
+  "short_name": "GraviBoxes",
+  "description": "重力糖果玩具 - 倾斜手机让糖果飞起来",
+  "start_url": "./index.html",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#c97ee8",
+  "theme_color": "#c97ee8",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
