@@ -313,7 +313,7 @@ iconCache = [...ICONS, ...DOCK_DEFS].map(buildIconCanvas);
 // ─────────────────────────────────────────────
 const COLS=4;
 function layout(cw, ch){
-  const sc = Math.min(cw / 390, 1.0);  // 最大1.0，iPhone满屏刚好
+  const sc = Math.min(cw / 390, 1.15);
   const ic  = Math.round(60 * sc);
   const hg  = Math.round(18 * sc);
   const vg  = Math.round(14 * sc);
@@ -398,7 +398,7 @@ function drawWallpaper() {
 }
 
 function getDockMetrics() {
-  const sc = Math.min(W / 390, 1.0);
+  const sc = Math.min(W / 390, 1.15);
   const iconSz = Math.round(60*sc);  // 和主网格图标同尺寸
   const gap    = Math.round(18*sc);
   const pad    = Math.round(14*sc);
